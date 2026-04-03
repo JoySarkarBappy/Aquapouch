@@ -45,7 +45,23 @@ export default function FutureInsights() {
                   className="flex items-start gap-4 p-4 rounded-xl bg-surface-container border border-outline-variant/20"
                 >
                   <div className="w-2 h-2 rounded-full bg-on-surface-variant/40 mt-2"></div>
-                  <span className="font-bold text-on-surface-variant">Flow Rate Optimization</span>
+                  <div>
+                    <span className="font-bold text-on-surface-variant block">Flow Rate Optimization</span>
+                    <p className="text-xs text-on-surface-variant mt-1">Refining internal geometry to maximize throughput without compromising filtration quality.</p>
+                  </div>
+                </motion.div>
+                <motion.div 
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.3 }}
+                  className="flex items-start gap-4 p-4 rounded-xl bg-primary/5 border border-primary/20 shadow-sm"
+                >
+                  <div className="w-2 h-2 rounded-full bg-primary mt-2"></div>
+                  <div>
+                    <span className="font-bold text-primary block">AI-Driven Quality Monitoring</span>
+                    <p className="text-xs text-on-surface-variant mt-1">Developing a low-power sensor suite that uses machine learning to predict filter life and water safety in real-time.</p>
+                  </div>
                 </motion.div>
               </div>
             </div>

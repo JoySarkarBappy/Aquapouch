@@ -5,14 +5,14 @@ export default function Team() {
   return (
     <section className="py-24 md:py-32 scroll-mt-20" id="team">
       <div className="container mx-auto px-6">
-        <div className="flex flex-col lg:flex-row gap-16 lg:gap-24">
-          <div className="lg:w-1/2">
+        <div className="bg-surface-container-lowest rounded-[3rem] p-8 md:p-16 shadow-sm border border-outline-variant/10 overflow-hidden">
+          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <span className="inline-block py-2 px-4 rounded-full bg-secondary-container text-on-secondary-container text-xs font-bold tracking-widest uppercase mb-6">
+              <span className="inline-block py-2 px-4 rounded-full bg-secondary-container text-on-secondary-container text-[10px] font-bold tracking-widest uppercase mb-6">
                 The Team Behind Aquapouch
               </span>
               <h2 className="text-4xl md:text-5xl font-bold mb-8 text-primary">Team ANDROMEDA</h2>
@@ -38,58 +38,73 @@ export default function Team() {
                   ))}
                 </div>
               </div>
+
+              <div className="flex gap-4">
+                <div className="p-4 rounded-2xl bg-primary/5 text-primary border border-primary/10">
+                  <Mail className="w-5 h-5" />
+                </div>
+                <div className="p-4 rounded-2xl bg-primary/5 text-primary border border-primary/10">
+                  <Phone className="w-5 h-5" />
+                </div>
+                <div className="p-4 rounded-2xl bg-primary/5 text-primary border border-primary/10">
+                  <MapPin className="w-5 h-5" />
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              className="relative aspect-[4/3] lg:aspect-[16/10] lg:h-[550px] overflow-hidden rounded-[2.5rem] shadow-2xl border border-primary/20 group"
+            >
+              <img 
+                src="https://i.postimg.cc/Kvqsv4tb/2026-04-04-00-19-07.jpg" 
+                alt="Team Member" 
+                className="w-full h-full object-cover object-center brightness-95 group-hover:brightness-100 group-hover:scale-105 transition-all duration-700"
+                referrerPolicy="no-referrer"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+              <div className="absolute bottom-6 left-6 md:bottom-10 md:left-10">
+                <div className="inline-block py-1 px-3 md:py-1.5 md:px-4 rounded-full bg-primary text-white text-[8px] md:text-[10px] font-bold tracking-[0.2em] uppercase mb-2 md:mb-3">
+                  Aquapouch
+                </div>
+                <h4 className="text-xl md:text-3xl font-bold text-white">Team Member</h4>
+              </div>
             </motion.div>
           </div>
+        </div>
 
-          <div className="lg:w-1/2" id="contact">
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="bg-surface-container-lowest p-8 md:p-12 rounded-3xl shadow-xl border border-outline-variant/10"
-            >
-              <h3 className="text-2xl font-bold mb-8">Contact Info</h3>
-              <div className="space-y-8">
-                <div className="flex gap-6 items-start">
-                  <div className="p-4 rounded-2xl bg-primary/5 text-primary">
-                    <Mail className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold mb-1">Email Us</h4>
-                    <p className="text-on-surface-variant text-sm">andromeda.buet@gmail.com</p>
-                    <p className="text-on-surface-variant text-xs mt-1">We respond within 24 hours.</p>
-                  </div>
-                </div>
-                
-                <div className="flex gap-6 items-start">
-                  <div className="p-4 rounded-2xl bg-primary/5 text-primary">
-                    <Phone className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold mb-1">Call Us</h4>
-                    <p className="text-on-surface-variant text-sm">+880 6448164694</p>
-                    <p className="text-on-surface-variant text-xs mt-1">Available Mon-Fri, 9am-5pm.</p>
-                  </div>
-                </div>
-
-                <div className="flex gap-6 items-start">
-                  <div className="p-4 rounded-2xl bg-primary/5 text-primary">
-                    <MapPin className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold mb-1">Location</h4>
-                    <p className="text-on-surface-variant text-sm">Department of Materials and Metallurgical Engineering. BUET</p>
-                    <p className="text-on-surface-variant text-xs mt-1">Dhaka-1000, Bangladesh.</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="mt-12 pt-8 border-t border-outline-variant/20">
-                <button className="w-full bg-primary text-white py-4 rounded-xl font-bold shadow-lg shadow-primary/20 hover:bg-primary-container transition-all">
-                  Send a Message
-                </button>
-              </div>
-            </motion.div>
+        {/* Contact Info Row */}
+        <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8" id="contact">
+          <div className="bg-white p-6 md:p-8 rounded-3xl border border-outline-variant/10 shadow-sm flex items-center gap-4 md:gap-6 group hover:border-primary/20 transition-colors">
+            <div className="shrink-0 p-4 rounded-2xl bg-primary/5 text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300">
+              <Mail className="w-6 h-6" />
+            </div>
+            <div className="min-w-0">
+              <h4 className="font-bold text-[10px] uppercase tracking-[0.2em] text-primary/60 mb-1">Email</h4>
+              <p className="text-sm font-bold truncate hover:text-clip hover:whitespace-normal transition-all" title="andromeda.buet@gmail.com">
+                andromeda.buet@gmail.com
+              </p>
+            </div>
+          </div>
+          <div className="bg-white p-6 md:p-8 rounded-3xl border border-outline-variant/10 shadow-sm flex items-center gap-4 md:gap-6 group hover:border-primary/20 transition-colors">
+            <div className="shrink-0 p-4 rounded-2xl bg-primary/5 text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300">
+              <Phone className="w-6 h-6" />
+            </div>
+            <div className="min-w-0">
+              <h4 className="font-bold text-[10px] uppercase tracking-[0.2em] text-primary/60 mb-1">Phone</h4>
+              <p className="text-sm font-bold">+880 6448164694</p>
+            </div>
+          </div>
+          <div className="bg-white p-6 md:p-8 rounded-3xl border border-outline-variant/10 shadow-sm flex items-center gap-4 md:gap-6 group hover:border-primary/20 transition-colors sm:col-span-2 lg:col-span-1">
+            <div className="shrink-0 p-4 rounded-2xl bg-primary/5 text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300">
+              <MapPin className="w-6 h-6" />
+            </div>
+            <div className="min-w-0">
+              <h4 className="font-bold text-[10px] uppercase tracking-[0.2em] text-primary/60 mb-1">Location</h4>
+              <p className="text-sm font-bold">BUET, Dhaka-1000</p>
+            </div>
           </div>
         </div>
       </div>
