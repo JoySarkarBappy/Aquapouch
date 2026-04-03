@@ -67,7 +67,7 @@ export default function Team() {
                   </div>
                   <div>
                     <h4 className="font-bold mb-1">Call Us</h4>
-                    <p className="text-on-surface-variant text-sm">+880 1XXX-XXXXXX</p>
+                    <p className="text-on-surface-variant text-sm">+880 6448164694</p>
                     <p className="text-on-surface-variant text-xs mt-1">Available Mon-Fri, 9am-5pm.</p>
                   </div>
                 </div>

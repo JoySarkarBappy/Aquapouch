@@ -71,7 +71,7 @@ export default function Results() {
           </motion.div>
 
           {/* Transition Arrow */}
-          <div className="lg:col-span-1 flex items-center justify-center">
+          <div className="lg:col-span-1 flex items-center justify-center py-4 lg:py-0">
             <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white shadow-lg shadow-primary/20 rotate-90 lg:rotate-0">
               <ArrowRight className="w-6 h-6" />
             </div>

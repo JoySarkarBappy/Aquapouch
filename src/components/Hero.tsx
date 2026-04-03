@@ -1,6 +1,10 @@
 import { motion } from "motion/react";
 
-export default function Hero() {
+interface HeroProps {
+  onPurchase: () => void;
+}
+
+export default function Hero({ onPurchase }: HeroProps) {
   return (
     <section className="relative min-h-screen flex items-center pt-24 overflow-hidden" id="home">
       <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
@@ -21,13 +25,15 @@ export default function Hero() {
           </p>
           <div className="flex flex-wrap gap-4">
             <motion.button 
+              onClick={onPurchase}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-primary text-white px-8 md:px-10 py-3 md:py-4 rounded-full font-bold shadow-lg hover:shadow-primary/20 transition-all"
             >
-              Explore Engineering
+              Buy Now
             </motion.button>
             <motion.button 
+              onClick={() => document.getElementById('results')?.scrollIntoView({ behavior: 'smooth' })}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="border border-outline-variant text-on-surface px-8 md:px-10 py-3 md:py-4 rounded-full font-bold hover:bg-surface-container transition-all"

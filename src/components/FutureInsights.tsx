@@ -57,9 +57,9 @@ export default function FutureInsights() {
                 className="relative w-full aspect-square overflow-hidden rounded-2xl shadow-2xl border border-primary/20"
               >
                 <img 
-                  alt="Engineering roadmap illustration" 
-                  className="w-full h-full object-cover brightness-90 group-hover:scale-105 transition-all duration-700" 
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuByeBd4TUJdKPwSx773X7TfWwjSCgZEZWz6CvacdncaHQ-YnsX3AUMYobf20lQ-3SPDYGsFMbqf6zHF622VlaNiTHpOwv8xE4_tVhFW8UxpXGGhlcgX1tosa-VPzQCxlroNbyMesnBEzzYeM28NRI5izIW9YYBGf4WyBbZUeHjDmhE_-UpdbfpHPbk-A2Ccx1ifQdUuSwjrmArCicW8KE4iE5jh_dj7dIe7osSmxeAP5VX_KdFjCIJ2CLmSmEC0_kU33DlKcyMZKnE"
+                  alt="Advanced water filtration system" 
+                  className="w-full h-full object-cover brightness-100 group-hover:scale-105 transition-all duration-700" 
+                  src="https://static-01.daraz.com.bd/p/489397f5788179e9240690edb80bfcbe.jpg"
                   referrerPolicy="no-referrer"
                 />
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent pointer-events-none"></div>
