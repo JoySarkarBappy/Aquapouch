@@ -37,11 +37,21 @@ export default function Navbar({ onPurchase }: NavbarProps) {
           ))}
         </div>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-2 md:gap-4">
+          <motion.button 
+            onClick={onPurchase}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="bg-primary text-white px-4 md:px-8 py-2 md:py-3 rounded-full font-bold text-xs md:text-base shadow-lg shadow-primary/20 whitespace-nowrap"
+          >
+            Buy Now
+          </motion.button>
+
           {/* Mobile Menu Toggle */}
           <button 
-            className="md:hidden p-2 text-primary"
+            className="md:hidden p-2 text-primary hover:bg-primary/5 rounded-lg transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle menu"
           >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -68,6 +78,16 @@ export default function Navbar({ onPurchase }: NavbarProps) {
                   {link.name}
                 </a>
               ))}
+              <motion.button 
+                onClick={() => {
+                  onPurchase();
+                  setIsMenuOpen(false);
+                }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-primary text-white px-6 py-4 rounded-xl font-bold text-center shadow-lg shadow-primary/20"
+              >
+                Buy Now
+              </motion.button>
             </div>
           </motion.div>
         )}

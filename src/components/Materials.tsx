@@ -7,24 +7,28 @@ const layers = [
     description: "Act as a coarse sediment pre-filter, trapping large particles, leaves, and visible debris.",
     icon: Mountain,
     accent: "bg-amber-500",
+    image: "https://www.gsgravel.com/wp-content/uploads/2019/06/blog-gravel-or-stone.jpg",
   },
   {
     title: "Zeolite",
     description: "Specialized in chemical purification. Targets heavy metal ions and specific chemical contaminants.",
     icon: Gem,
     accent: "bg-slate-300",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRSannsxIr700l9LnHLCiulOdAVsLnzRVQBA&s",
   },
   {
     title: "Activated Charcoal",
     description: "Primary function is adsorption, removing organic compounds, dissolved gases, and chlorine to improve taste and odor.",
     icon: Flame,
     accent: "bg-slate-800",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGc_eKrrBs-NffAE11Zz0BJjwFYuy1txRGgw&s",
   },
   {
     title: "Filter Discs",
     description: "Serve as the final polishing stage, providing fine mechanical sieving to ensure maximum clarity.",
     icon: Layers,
     accent: "bg-sky-400",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaqdgE04Pimo2Tr9zK7v3-eXtaPSjDYwCgmg&s",
   },
 ];
 
@@ -49,9 +53,17 @@ export default function Materials() {
               transition={{ delay: index * 0.1 }}
               className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 group border border-outline-variant/10"
             >
-              <div className="relative h-48 flex items-center justify-center bg-surface-container-lowest">
-                <div className={`absolute inset-0 opacity-5 ${layer.accent}`}></div>
-                <layer.icon className={`w-16 h-16 ${layer.accent.replace('bg-', 'text-')} opacity-80 group-hover:scale-110 transition-transform duration-500`} />
+              <div className="relative h-48 overflow-hidden bg-surface-container-lowest">
+                <img 
+                  src={layer.image} 
+                  alt={layer.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 brightness-90 group-hover:brightness-100"
+                  referrerPolicy="no-referrer"
+                />
+                <div className={`absolute inset-0 opacity-20 ${layer.accent} mix-blend-multiply`}></div>
+                <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center shadow-lg">
+                  <layer.icon className={`w-5 h-5 ${layer.accent.replace('bg-', 'text-')}`} />
+                </div>
                 <div className={`absolute bottom-0 left-0 w-full h-1 ${layer.accent}`}></div>
               </div>
               <div className="p-8 text-center md:text-left">
