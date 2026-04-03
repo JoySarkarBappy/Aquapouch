@@ -17,6 +17,13 @@ export default function Footer() {
           <a className="text-on-surface-variant hover:text-primary transition-all duration-300 text-[10px] font-bold uppercase tracking-[0.15em] hover:translate-y-[-2px]" href="#">Sustainability Report</a>
         </div>
       </div>
+      <div className="border-t border-outline-variant/5 py-8">
+        <div className="container mx-auto px-6 text-center">
+          <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-on-surface-variant/40">
+            Developed by <span className="text-primary/60">Joy Sarkar</span>
+          </p>
+        </div>
+      </div>
     </footer>
   );
 }
