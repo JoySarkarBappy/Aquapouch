@@ -3,7 +3,7 @@ import { Users, Mail, Phone, MapPin } from "lucide-react";
 
 export default function Team() {
   return (
-    <section className="py-24 md:py-32" id="team">
+    <section className="py-24 md:py-32 scroll-mt-20" id="team">
       <div className="container mx-auto px-6">
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-24">
           <div className="lg:w-1/2">

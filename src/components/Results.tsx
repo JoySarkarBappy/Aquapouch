@@ -10,7 +10,7 @@ const stats = [
 
 export default function Results() {
   return (
-    <section className="py-24 md:py-32 bg-surface-container-lowest" id="results">
+    <section className="py-24 md:py-32 bg-surface-container-lowest scroll-mt-20" id="results">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto text-center mb-16 md:mb-24">
           <motion.div

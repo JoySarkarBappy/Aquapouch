@@ -6,7 +6,7 @@ interface HeroProps {
 
 export default function Hero({ onPurchase }: HeroProps) {
   return (
-    <section className="relative min-h-screen flex items-center pt-24 overflow-hidden" id="home">
+    <section className="relative min-h-screen flex items-center pt-24 overflow-hidden scroll-mt-24" id="home">
       <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
         <motion.div 
           initial={{ opacity: 0, x: -50 }}

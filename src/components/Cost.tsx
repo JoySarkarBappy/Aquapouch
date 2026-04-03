@@ -7,7 +7,7 @@ interface CostProps {
 
 export default function Cost({ onPurchase }: CostProps) {
   return (
-    <section className="py-24 md:py-32 bg-primary text-white relative overflow-hidden" id="cost">
+    <section className="py-24 md:py-32 bg-primary text-white relative overflow-hidden scroll-mt-20" id="cost">
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center mb-16 md:mb-20">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Efficiency You Can Afford</h2>

@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 
 export default function FutureInsights() {
   return (
-    <section className="py-24 md:py-32 bg-surface-container-high relative overflow-hidden">
+    <section className="py-24 md:py-32 bg-surface-container-high relative overflow-hidden" id="insights">
       <div className="container mx-auto px-6 relative z-10">
         <div className="bg-surface-container-lowest rounded-3xl p-8 md:p-12 shadow-sm border border-outline-variant/10">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">

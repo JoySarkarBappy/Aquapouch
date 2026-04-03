@@ -34,7 +34,7 @@ const layers = [
 
 export default function Materials() {
   return (
-    <section className="py-24 md:py-32 bg-surface-container-low" id="materials">
+    <section className="py-24 md:py-32 bg-surface-container-low scroll-mt-20" id="materials">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 md:mb-24">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">The Multi-Layered Matrix</h2>
