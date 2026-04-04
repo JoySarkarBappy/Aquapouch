@@ -4,14 +4,14 @@ export default function FutureInsights() {
   return (
     <section className="py-24 md:py-32 bg-surface-container-high relative overflow-hidden" id="insights">
       <div className="container mx-auto px-6 relative z-10">
-        <div className="bg-surface-container-lowest rounded-3xl p-8 md:p-12 shadow-sm border border-outline-variant/10">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="bg-surface-container-lowest rounded-[2rem] md:rounded-3xl p-6 sm:p-8 md:p-12 shadow-sm border border-outline-variant/10">
+          <div className="grid lg:grid-cols-2 gap-10 md:gap-12 lg:gap-16 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-8 text-primary">Future Insights:</h2>
-              <p className="text-on-surface-variant mb-10">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 md:mb-8 text-primary">Future Insights:</h2>
+              <p className="text-on-surface-variant mb-8 md:mb-10 text-sm sm:text-base">
                 We are committed to continuous iteration. Our roadmap includes technical milestones to further enhance the system.
               </p>
-              <div className="space-y-6">
+              <div className="space-y-4 sm:space-y-6">
                 <motion.div 
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}

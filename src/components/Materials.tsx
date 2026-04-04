@@ -43,7 +43,7 @@ export default function Materials() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {layers.map((layer, index) => (
             <motion.div 
               key={index}
@@ -53,7 +53,7 @@ export default function Materials() {
               transition={{ delay: index * 0.1 }}
               className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 group border border-outline-variant/10"
             >
-              <div className="relative h-48 overflow-hidden bg-surface-container-lowest">
+              <div className="relative h-40 sm:h-48 overflow-hidden bg-surface-container-lowest">
                 <img 
                   src={layer.image} 
                   alt={layer.title}
@@ -61,16 +61,16 @@ export default function Materials() {
                   referrerPolicy="no-referrer"
                 />
                 <div className={`absolute inset-0 opacity-20 ${layer.accent} mix-blend-multiply`}></div>
-                <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center shadow-lg">
-                  <layer.icon className={`w-5 h-5 ${layer.accent.replace('bg-', 'text-')}`} />
+                <div className="absolute top-3 right-3 sm:top-4 sm:right-4 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center shadow-lg">
+                  <layer.icon className={`w-4 h-4 sm:w-5 sm:h-5 ${layer.accent.replace('bg-', 'text-')}`} />
                 </div>
                 <div className={`absolute bottom-0 left-0 w-full h-1 ${layer.accent}`}></div>
               </div>
-              <div className="p-8 text-center md:text-left">
-                <h3 className="text-xl font-bold mb-4 text-primary group-hover:text-secondary transition-colors">
+              <div className="p-6 sm:p-8 text-center sm:text-left">
+                <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-primary group-hover:text-secondary transition-colors">
                   {layer.title}
                 </h3>
-                <p className="text-sm text-on-surface-variant leading-relaxed">
+                <p className="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
                   {layer.description}
                 </p>
               </div>

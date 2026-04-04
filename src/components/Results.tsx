@@ -25,28 +25,28 @@ export default function Results() {
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-11 gap-8 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-11 gap-6 md:gap-10 lg:gap-4 xl:gap-8 items-stretch max-w-2xl lg:max-w-none mx-auto">
           {/* Raw Water Box */}
           <motion.div 
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="lg:col-span-5 bg-white p-8 rounded-[2rem] border border-outline-variant/10 shadow-sm flex flex-col"
+            className="lg:col-span-5 bg-white p-6 sm:p-10 rounded-[2rem] border border-outline-variant/10 shadow-sm flex flex-col w-full"
           >
-            <div className="flex items-center gap-3 mb-8">
-              <div className="w-10 h-10 rounded-full bg-on-surface-variant/10 flex items-center justify-center text-on-surface-variant">
-                <FlaskConical className="w-5 h-5" />
+            <div className="flex items-center gap-4 mb-8 md:mb-10">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-on-surface-variant/5 flex items-center justify-center text-on-surface-variant">
+                <FlaskConical className="w-5 h-5 sm:w-6 sm:h-6" />
               </div>
               <div>
-                <h3 className="font-bold text-xl">Raw Water Profile</h3>
-                <p className="text-xs text-on-surface-variant font-medium uppercase tracking-widest">Initial State</p>
+                <h3 className="font-bold text-xl sm:text-2xl text-primary">Raw Water Profile</h3>
+                <p className="text-[10px] text-on-surface-variant font-bold uppercase tracking-[0.2em]">Initial State</p>
               </div>
             </div>
 
-            <div className="space-y-8 flex-grow">
+            <div className="space-y-8 md:space-y-10 flex-grow">
               {stats.map((stat, i) => (
-                <div key={i} className="space-y-2">
-                  <div className="flex justify-between text-xs font-bold text-on-surface-variant/60 uppercase">
+                <div key={i} className="space-y-3">
+                  <div className="flex justify-between text-[10px] sm:text-xs font-bold text-on-surface-variant/60 uppercase tracking-wider">
                     <span>{stat.name}</span>
                     <span>{stat.raw} {stat.unit}</span>
                   </div>
@@ -56,55 +56,55 @@ export default function Results() {
                       whileInView={{ width: `${(stat.raw / stat.max) * 100}%` }}
                       viewport={{ once: true }}
                       transition={{ duration: 1, ease: "easeOut" }}
-                      className="h-full bg-on-surface-variant/30"
+                      className="h-full bg-on-surface-variant/20"
                     />
                   </div>
                 </div>
               ))}
             </div>
             
-            <div className="mt-10 pt-8 border-t border-outline-variant/10">
-              <p className="text-xs text-on-surface-variant italic leading-relaxed">
+            <div className="mt-10 md:mt-12 pt-8 border-t border-outline-variant/10">
+              <p className="text-xs text-on-surface-variant/70 italic leading-relaxed">
                 Source water collected from local pond showing high turbidity and low dissolved oxygen levels.
               </p>
             </div>
           </motion.div>
 
           {/* Transition Arrow */}
-          <div className="lg:col-span-1 flex items-center justify-center py-4 lg:py-0">
-            <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white shadow-lg shadow-primary/20 rotate-90 lg:rotate-0">
-              <ArrowRight className="w-6 h-6" />
+          <div className="lg:col-span-1 flex items-center justify-center py-6 lg:py-0">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-primary flex items-center justify-center text-white shadow-xl shadow-primary/20 rotate-90 lg:rotate-0">
+              <ArrowRight className="w-6 h-6 sm:w-7 sm:h-7" />
             </div>
           </div>
 
           {/* Treated Water Box */}
           <motion.div 
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="lg:col-span-5 bg-white p-8 rounded-[2rem] border-2 border-primary shadow-xl shadow-primary/5 flex flex-col relative overflow-hidden"
+            className="lg:col-span-5 bg-white p-6 sm:p-10 rounded-[2rem] border-2 border-primary shadow-2xl shadow-primary/5 flex flex-col relative overflow-hidden w-full"
           >
-            <div className="absolute top-0 right-0 p-4">
-              <Verified className="w-8 h-8 text-primary/20" />
+            <div className="absolute top-0 right-0 p-4 sm:p-6">
+              <Verified className="w-8 h-8 sm:w-10 sm:h-10 text-primary/10" />
             </div>
             
-            <div className="flex items-center gap-3 mb-8">
-              <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                <Droplets className="w-5 h-5" />
+            <div className="flex items-center gap-4 mb-8 md:mb-10">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
+                <Droplets className="w-5 h-5 sm:w-6 sm:h-6" />
               </div>
               <div>
-                <h3 className="font-bold text-xl text-primary">Aquapouch Treated</h3>
-                <p className="text-xs text-primary font-bold uppercase tracking-widest">Optimized Output</p>
+                <h3 className="font-bold text-xl sm:text-2xl text-primary">Aquapouch Treated</h3>
+                <p className="text-[10px] text-primary font-bold uppercase tracking-[0.2em]">Optimized Output</p>
               </div>
             </div>
 
-            <div className="space-y-8 flex-grow">
+            <div className="space-y-8 md:space-y-10 flex-grow">
               {stats.map((stat, i) => (
-                <div key={i} className="space-y-2">
-                  <div className="flex justify-between text-xs font-bold text-primary uppercase">
+                <div key={i} className="space-y-3">
+                  <div className="flex justify-between text-[10px] sm:text-xs font-bold text-primary uppercase tracking-wider">
                     <span>{stat.name}</span>
-                    <div className="flex items-center gap-2">
-                      <span className="text-[10px] bg-primary/10 px-2 py-0.5 rounded text-primary">
+                    <div className="flex items-center gap-3">
+                      <span className="text-[9px] sm:text-[11px] bg-primary/10 px-2 py-0.5 rounded-full text-primary font-black">
                         +{(((stat.treated - stat.raw) / stat.raw) * 100).toFixed(1)}%
                       </span>
                       <span>{stat.treated} {stat.unit}</span>
@@ -116,15 +116,15 @@ export default function Results() {
                       whileInView={{ width: `${(stat.treated / stat.max) * 100}%` }}
                       viewport={{ once: true }}
                       transition={{ duration: 1.2, ease: "easeOut", delay: 0.2 }}
-                      className="h-full bg-primary shadow-[0_0_8px_rgba(0,115,153,0.4)]"
+                      className="h-full bg-primary shadow-[0_0_12px_rgba(0,115,153,0.4)]"
                     />
                   </div>
                 </div>
               ))}
             </div>
 
-            <div className="mt-10 pt-8 border-t border-outline-variant/10 flex items-center justify-between">
-              <p className="text-xs text-primary font-bold">Laboratory Verified Results</p>
+            <div className="mt-10 md:mt-12 pt-8 border-t border-outline-variant/10 flex items-center justify-between">
+              <p className="text-xs text-primary font-black uppercase tracking-widest">Laboratory Verified</p>
               <Verified className="text-primary w-6 h-6" />
             </div>
           </motion.div>

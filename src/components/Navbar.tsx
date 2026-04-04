@@ -44,17 +44,17 @@ export default function Navbar({ onPurchase }: NavbarProps) {
 
   return (
     <nav className="fixed top-0 w-full z-50 glass-effect shadow-[0px_12px_32px_rgba(25,28,29,0.06)] no-line">
-      <div className="flex justify-between items-center px-6 md:px-12 py-4 md:py-6 max-w-screen-2xl mx-auto font-headline tracking-tight">
-        <div className="text-xl md:text-2xl font-bold text-primary uppercase tracking-widest">
+      <div className="flex justify-between items-center px-4 sm:px-6 md:px-12 py-3 md:py-6 max-w-screen-2xl mx-auto font-headline tracking-tight">
+        <div className="text-lg sm:text-xl md:text-2xl font-bold text-primary uppercase tracking-widest shrink-0">
           Aquapouch
         </div>
         
         {/* Desktop Links */}
-        <div className="hidden lg:flex items-center gap-6">
+        <div className="hidden lg:flex items-center gap-4 xl:gap-8">
           {navLinks.map((link) => (
             <a 
               key={link.name}
-              className={`transition-all duration-300 ease-in-out hover:opacity-80 text-[13px] font-bold uppercase tracking-wider ${
+              className={`transition-all duration-300 ease-in-out hover:opacity-80 text-[11px] xl:text-[13px] font-bold uppercase tracking-wider whitespace-nowrap ${
                 activeSection === link.id 
                   ? "text-primary scale-105" 
                   : "text-on-surface/50 hover:text-primary"
@@ -71,18 +71,18 @@ export default function Navbar({ onPurchase }: NavbarProps) {
             onClick={onPurchase}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-primary text-white px-4 md:px-8 py-2 md:py-3 rounded-full font-bold text-xs md:text-base shadow-lg shadow-primary/20 whitespace-nowrap"
+            className="bg-primary text-white px-4 sm:px-6 md:px-8 py-2 md:py-3 rounded-full font-bold text-[10px] sm:text-xs md:text-base shadow-lg shadow-primary/20 whitespace-nowrap"
           >
             Buy Now
           </motion.button>
 
           {/* Mobile Menu Toggle */}
           <button 
-            className="lg:hidden p-2 text-primary hover:bg-primary/5 rounded-lg transition-colors"
+            className="lg:hidden p-1.5 sm:p-2 text-primary hover:bg-primary/5 rounded-lg transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMenuOpen ? <X className="w-5 h-5 sm:w-6 sm:h-6" /> : <Menu className="w-5 h-5 sm:w-6 sm:h-6" />}
           </button>
         </div>
       </div>

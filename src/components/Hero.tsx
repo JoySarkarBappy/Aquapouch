@@ -6,29 +6,29 @@ interface HeroProps {
 
 export default function Hero({ onPurchase }: HeroProps) {
   return (
-    <section className="relative min-h-screen flex items-center pt-24 overflow-hidden scroll-mt-24" id="home">
-      <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+    <section className="relative min-h-screen flex items-center pt-20 md:pt-24 overflow-hidden scroll-mt-24" id="home">
+      <div className="container mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-8 md:gap-12 items-center py-12 md:py-20">
         <motion.div 
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="z-10"
+          className="z-10 text-center lg:text-left"
         >
-          <span className="inline-block py-2 px-4 rounded-full bg-secondary-container text-on-secondary-container text-xs font-bold tracking-widest uppercase mb-6">
+          <span className="inline-block py-2 px-4 rounded-full bg-secondary-container text-on-secondary-container text-[10px] sm:text-xs font-bold tracking-widest uppercase mb-4 md:mb-6">
             Innovation in Hydration
           </span>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-primary leading-tight mb-8">
-            Pure Water. <br /> <span className="text-secondary">Engineered.</span>
+          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-primary leading-tight mb-6 md:mb-8">
+            Pure Water. <br className="hidden sm:block" /> <span className="text-secondary">Engineered.</span>
           </h1>
-          <p className="text-lg md:text-xl text-on-surface-variant max-w-xl leading-relaxed mb-10">
+          <p className="text-base sm:text-lg md:text-xl text-on-surface-variant max-w-xl mx-auto lg:mx-0 leading-relaxed mb-8 md:mb-10">
             A heavy-duty, portable solution that transitions from the lab to the real world. Aquapouch introduces a modular, gravity-fed filtration system designed for immediate water supply.
           </p>
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap justify-center lg:justify-start gap-4">
             <motion.button 
               onClick={onPurchase}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-primary text-white px-8 md:px-10 py-3 md:py-4 rounded-full font-bold shadow-lg hover:shadow-primary/20 transition-all"
+              className="bg-primary text-white px-6 sm:px-8 md:px-10 py-3 md:py-4 rounded-full font-bold text-sm sm:text-base shadow-lg hover:shadow-primary/20 transition-all"
             >
               Buy Now
             </motion.button>
@@ -36,7 +36,7 @@ export default function Hero({ onPurchase }: HeroProps) {
               onClick={() => document.getElementById('results')?.scrollIntoView({ behavior: 'smooth' })}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="border border-outline-variant text-on-surface px-8 md:px-10 py-3 md:py-4 rounded-full font-bold hover:bg-surface-container transition-all"
+              className="border border-outline-variant text-on-surface px-6 sm:px-8 md:px-10 py-3 md:py-4 rounded-full font-bold text-sm sm:text-base hover:bg-surface-container transition-all"
             >
               View Results
             </motion.button>
@@ -46,10 +46,10 @@ export default function Hero({ onPurchase }: HeroProps) {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.2 }}
-          className="relative flex justify-center items-center"
+          className="relative flex justify-center items-center mt-8 lg:mt-0"
         >
-          <div className="absolute w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-primary/5 rounded-full blur-3xl"></div>
-          <div className="relative z-10 w-full max-w-lg aspect-square">
+          <div className="absolute w-[250px] sm:w-[400px] md:w-[600px] h-[250px] sm:h-[400px] md:h-[600px] bg-primary/5 rounded-full blur-3xl"></div>
+          <div className="relative z-10 w-full max-w-[280px] sm:max-w-md lg:max-w-lg aspect-square">
             <img 
               alt="3D Render of Modular Gravity-Fed Filter" 
               className="w-full h-full object-contain drop-shadow-2xl" 
