@@ -32,6 +32,7 @@ export default function App() {
         <Cost onPurchase={openPurchaseModal} />
         <Features />
         <Team />
+        <FutureInsights />
         <section className="py-16 md:py-24 bg-surface-container-lowest">
           <div className="container mx-auto px-6 text-center">
             <motion.div
@@ -39,7 +40,7 @@ export default function App() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-xl md:text-2xl font-bold mb-8 md:mb-12 text-primary uppercase tracking-[0.3em]">Founded by</h3>
+              <h3 className="text-xl md:text-2xl font-bold mb-8 md:mb-12 text-primary uppercase tracking-[0.3em]">Funded by</h3>
               <div className="max-w-[280px] sm:max-w-md mx-auto rounded-2xl overflow-hidden shadow-lg border border-outline-variant/10 group bg-white p-6">
                 <img 
                   src="https://salamsteel.com/wp-content/uploads/2024/04/250X90-1.png" 
@@ -54,7 +55,6 @@ export default function App() {
             </motion.div>
           </div>
         </section>
-        <FutureInsights />
       </main>
       <Footer />
       <PurchaseModal isOpen={isPurchaseModalOpen} onClose={closePurchaseModal} />
