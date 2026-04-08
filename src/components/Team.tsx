@@ -16,7 +16,7 @@ export default function Team() {
               <span className="inline-block py-2 px-4 rounded-full bg-secondary-container text-on-secondary-container text-[10px] font-bold tracking-widest uppercase mb-4 md:mb-6">
                 The Team Behind Aquapouch
               </span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 md:mb-8 text-primary">Team ANDROMEDA</h2>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 md:mb-8 text-primary">Team Strategy</h2>
               <p className="text-on-surface-variant mb-8 md:mb-10 leading-relaxed text-sm sm:text-base">
                 A group of dedicated engineering students from the Department of Materials and Metallurgical Engineering (MME), BUET, committed to solving global water crises through modular innovation.
               </p>

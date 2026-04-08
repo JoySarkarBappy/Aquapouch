@@ -55,6 +55,28 @@ export default function App() {
             </motion.div>
           </div>
         </section>
+
+        <section className="pb-24 md:pb-32 bg-surface-container-lowest">
+          <div className="container mx-auto px-6 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              <div className="max-w-[200px] sm:max-w-xs mx-auto rounded-2xl overflow-hidden shadow-lg border border-outline-variant/10 group bg-white p-6">
+                <img 
+                  src="https://i.ibb.co.com/bg1cSRXs/bc67aea014334292e1e3165aa63fd0f097d1e2401ec773b3875182f3b2c81793.jpg" 
+                  alt="Additional Funding Partner" 
+                  className="w-full h-auto object-contain group-hover:scale-105 transition-all duration-500"
+                  referrerPolicy="no-referrer"
+                  onError={(e) => {
+                    console.error("Image failed to load");
+                  }}
+                />
+              </div>
+            </motion.div>
+          </div>
+        </section>
       </main>
       <Footer />
       <PurchaseModal isOpen={isPurchaseModalOpen} onClose={closePurchaseModal} />
